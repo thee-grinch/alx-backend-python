@@ -5,6 +5,6 @@ length of the list as a tuple."""
 from typing import List, Tuple
 
 
-def element_length(lst: List[str]) -> Tuple[int, List[int]]:
+def element_length(lst: List[str]) -> List[Tuple[int, int]]:
     """Return a tuple of the length of a list and a list of the lengths of each element."""
     return (len(lst), [len(i) for i in lst])
