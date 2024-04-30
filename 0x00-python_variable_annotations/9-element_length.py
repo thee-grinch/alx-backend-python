@@ -2,10 +2,10 @@
 """Type-annotated function element_length
 that takes a list lst as argument and returns the
 length of the list as a tuple."""
-import typing
+from typing import List, Sequence, Tuple, Iterable
 
 
-def element_length(lst: typing.Iterable[typing.Sequence]) -> typing.List[typing.Tuple[typing.Sequence, int]]:
-    """Return a tuple of the length of a list and a
-    list of the lengths of each element."""
-    return (len(lst), [len(i) for i in lst])
+def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
+    '''Computes the length of a list of sequences.
+    '''
+    return [(i, len(i)) for i in lst]
